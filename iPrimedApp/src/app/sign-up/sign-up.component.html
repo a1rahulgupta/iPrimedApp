@@ -1,0 +1,42 @@
+<div class="login-main">
+  <div class="container">
+
+    <div id="loginbox">
+      <div class="panel panel-info">
+        <div style="padding-top:30px" class="panel-body">
+          <form id="loginform" class="form-horizontal" [formGroup]="userSignUp" (ngSubmit)="signUp()" role="form">
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="icon-user"></i>
+              </span>
+              <input id="signUp-firstName" type="text" class="form-control" formControlName="firstName" autofocus placeholder="Please enter your first name">
+            </div>
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="icon-user"></i>
+              </span>
+              <input id="signUp-lastName" type="text" class="form-control" formControlName="lastName" autofocus placeholder="Please enter your last Name">
+            </div>
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="icon-user"></i>
+              </span>
+              <input id="signUp-email" type="email" class="form-control" formControlName="email" autofocus placeholder="Please enter your email">
+            </div>
+            <div style="margin-bottom: 25px" class="input-group">
+              <span class="input-group-addon">
+                <i class="icon-lock"></i>
+              </span>
+              <input id="signUp-password" type="password" name="password" formControlName="password" class="form-control" placeholder="Please enter your Password">
+            </div>
+            <div style="margin-top:10px" class="form-group">
+              <div class="col-sm-12 controls">
+                <button [disabled]="userSignUp.invalid" id="btn-login" type="submit" class="btn btn-primary"> Sign Up </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
